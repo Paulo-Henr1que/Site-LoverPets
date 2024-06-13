@@ -5,6 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Site/assets/styles/style-home.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            height: 100vh;
+            background-image: url("/Site/assets/img/bkHome.png");
+            background-position-x: center;
+            background-position-y: 40px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            padding: 3px 10px 3px 10px;
+            background: #FCBA3F;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 70px;
+        }
+
+        header nav img{
+            height: 100px;
+        }
+
+        header nav #menu .menu-item {
+            margin: 8px;
+            font-weight: 600;
+            color: #883AC1;
+        }
+
+        main {
+            gap: 15px;
+            height: 600px;
+            width: 1000px;
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        main > p {
+            font-size: 24px;
+            color: #FCBA3F;
+            letter-spacing: 6px;
+        }
+
+        main > h1 {
+            color: #fff;
+            font-size: 40px;
+            line-height: 45px;
+        }
+
+        main > a {
+            font-weight: 600;
+            padding: 15px;
+            background: #FCBA3F;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
 </head>
 <body>
     <header>
@@ -22,9 +109,9 @@
     <main>
         <p>BEM-VINDO</p>
 
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto fugit adipisci sed beatae quibusdam veritatis tenetur accusantium fuga temporibus ut voluptates eos consequatur numquam expedita a, eveniet, architecto unde quidem.</h1>
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto fugit adipisci sed beatae quibusdam veritatis tenetur accusantium fuga temporibus ut voluptates <span style="color: #FCBA3F;">eos consequatur numquam expedita a, eveniet, architecto unde quidem.</span></h1>
 
-        <a href="">ADOTE AGORA!</a>
+        <a href="/Site/QueroAdotar.html">ADOTE AGORA!</a>
     </main>
 </body>
 </html>
