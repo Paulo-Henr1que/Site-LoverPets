@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #800080;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFA500;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            text-align: right;
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #800080;
+        }
+        .card {
+            background-color: #993399;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .card button {
+            background-color: #FFA500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .card button:hover {
+            background-color: #cc8400;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lover Pets</h1>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">QUERO ADOTAR</a>
+            <a href="#">PERDI MEU PET</a>
+            <a href="#">PETS PERDIDOS</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+                <img src="pet1.jpg" alt="Pet 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+            <div class="card">
+                <img src="pet2.jpg" alt="Pet 2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+            <div class="card">
+                <img src="pet3.jpg" alt="Pet 3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+            <div class="card">
+                <img src="pet4.jpg" alt="Pet 4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+            <div class="card">
+                <img src="pet5.jpg" alt="Pet 5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+            <div class="card">
+                <img src="pet6.jpg" alt="Pet 6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button>Adotar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

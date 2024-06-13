@@ -1,44 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pets Perdidos</title>
+    <title>Perdeu seu pet?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #800080;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFA500;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #800080;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+        .form-group input[type="file"] {
+            display: none;
+        }
+        .form-group .custom-file-label {
+            display: inline-block;
+            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        .form-group .custom-file-label:hover {
+            background-color: #e6e6e6;
+        }
+        .btn-submit {
+            background-color: #800080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-submit:hover {
+            background-color: #993399;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cadastro de Pets Perdidos</h1>
-    <form id="formPetPerdido">
-        <label for="nome_pet">Nome do Pet:</label><br>
-        <input type="text" id="nome_pet" name="nome_pet" required><br><br>
-
-        <label for="especie_pet">Espécie:</label><br>
-        <select id="especie_pet" name="especie_pet" required>
-            <option value="">Selecione a espécie</option>
-            <option value="cachorro">Cachorro</option>
-            <option value="gato">Gato</option>
-        </select><br><br>
-
-        <label for="raca_pet">Raça:</label><br>
-        <input type="text" id="raca_pet" name="raca_pet"><br><br>
-
-        <label for="cor_pet">Cor:</label><br>
-        <input type="text" id="cor_pet" name="cor_pet"><br><br>
-
-        <label for="local_perdido">Local onde foi perdido:</label><br>
-        <input type="text" id="local_perdido" name="local_perdido" required><br><br>
-
-        <label for="data_perdido">Data em que foi perdido:</label><br>
-        <input type="date" id="data_perdido" name="data_perdido" required><br><br>
-
-        <label for="informacoes_adicionais">Informações Adicionais:</label><br>
-        <textarea id="informacoes_adicionais" name="informacoes_adicionais" rows="4" cols="50"></textarea><br><br>
-
-        <button type="button" onclick="cadastrarPetPerdido()">Cadastrar</button>
-    </form>
-
+    <header>
+        <h1>Lover Pets</h1>
+    </header>
+    <div class="container">
+        <h2>Perdeu seu pet?</h2>
+        <p>Preencha as informações abaixo</p>
+        <form>
+            <div class="form-group">
+                <label for="first-name">Primeiro Nome *</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Digite seu primeiro nome aqui" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Segundo Nome *</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Digite seu segundo nome aqui" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Endereço de Email *</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descreve onde e quando você perdeu seu pet. *</label>
+                <textarea id="description" name="description" placeholder="Digite onde e quando o pet se perdeu." required></textarea>
+            </div>
+            <h2>Sobre seu pet</h2>
+            <div class="form-group">
+                <label for="pet-name">Nome do pet *</label>
+                <input type="text" id="pet-name" name="pet-name" placeholder="Digite o nome do pet" required>
+            </div>
+            <div class="form-group">
+                <label for="pet-info">Raça e gênero do pet *</label>
+                <input type="text" id="pet-info" name="pet-info" placeholder="Digite a raça e gênero do pet" required>
+            </div>
+            <div class="form-group">
+                <label for="pet-photo">Foto do seu pet para divulgação</label>
+                <label for="pet-photo" class="custom-file-label">Selecione uma foto</label>
+                <input type="file" id="pet-photo" name="pet-photo" accept="image/*">
+            </div>
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </div>
     <script>
-        function cadastrarPetPerdido() {
-           
-            var form = document.getElementById("formPetPerdido");
-            var formData = new FormData(form);
-        
-        }
+        document.getElementById('pet-photo').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            var nextSibling = this.nextElementSibling;
+            nextSibling.innerText = fileName;
+        });
     </script>
+</body>
+</html>
