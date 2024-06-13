@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perdeu seu pet?</title>
+    <title>Adote seu pet</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -105,7 +105,7 @@
     </header>
 
     <div class="container">
-        <h2>Perdeu seu pet?</h2>
+        <h2>Formulario de adoção.</h2>
         <p>Preencha as informações abaixo</p>
         <form>
             <div class="form-group">
@@ -119,34 +119,9 @@
             <div class="form-group">
                 <label for="email">Endereço de Email *</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
+                <p>Obs: Vamos enviar todas a isformasões via E-mail, fotos do pet, local de retirada e etc...</p>
             </div>
-            <div class="form-group">
-                <label for="description">Descreve onde e quando você perdeu seu pet. *</label>
-                <textarea id="description" name="description" placeholder="Digite onde e quando o pet se perdeu." required></textarea>
-            </div>
-            <h2>Sobre seu pet</h2>
-            <div class="form-group">
-                <label for="pet-name">Nome do pet *</label>
-                <input type="text" id="pet-name" name="pet-name" placeholder="Digite o nome do pet" required>
-            </div>
-            <div class="form-group">
-                <label for="pet-info">Raça e gênero do pet *</label>
-                <input type="text" id="pet-info" name="pet-info" placeholder="Digite a raça e gênero do pet" required>
-            </div>
-            <div class="form-group">
-                <label for="pet-photo">Foto do seu pet para divulgação</label>
-                <label for="pet-photo" class="custom-file-label">Selecione uma foto</label>
-                <input type="file" id="pet-photo" name="pet-photo" accept="image/*">
-            </div>
+            
             <button type="submit" class="btn-submit">Enviar</button>
-        </form>
-    </div>
-    <script>
-        document.getElementById('pet-photo').addEventListener('change', function() {
-            var fileName = this.files[0].name;
-            var nextSibling = this.nextElementSibling;
-            nextSibling.innerText = fileName;
-        });
-    </script>
 </body>
 </html>
